@@ -16,7 +16,7 @@ export default function Home() {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (searchWord) {
-      const url = `/search?word=${encodeURIComponent(searchWord)}`;
+      const url = `/search?q=${encodeURIComponent(searchWord)}`;
       router.push(url);
     }
   };
