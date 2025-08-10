@@ -1,9 +1,11 @@
 import { redirect } from 'next/navigation';
 import { searchEngines } from '@/data/searchEngines';
-import { PageProps } from 'next';
 
-export default function SearchPage({ searchParams }:PageProps) {
-
+export default function SearchPage({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | string[] | undefined };
+}) {
   const query = searchParams.q;
 
   if (!query || typeof query !== 'string') {
