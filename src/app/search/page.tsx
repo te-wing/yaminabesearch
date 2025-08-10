@@ -1,16 +1,11 @@
 import { redirect } from 'next/navigation';
+import { searchEngines } from '@/data/searchEngines';
 
 export default function SearchPage({
   searchParams,
 }: {
   searchParams: { [key: string]: string | string[] | undefined };
 }) {
-  // 検索エンジンのリストを定義します。必要に応じてここに追加・変更してください。
-  const searchEngines = [
-    { name: 'Google', url: 'https://www.google.com/search?q=' },
-    { name: 'Bing', url: 'https://www.bing.com/search?q=' },
-    { name: 'DuckDuckGo', url: 'https://duckduckgo.com/?q=' },
-  ];
 
   // URLからクエリパラメータ（'q'）を取得します。
   const query = searchParams.q;
