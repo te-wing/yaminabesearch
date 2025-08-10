@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.scss";
 import styles from './layout.module.scss';
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "闇鍋検索",
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body className={styles.body}>
         {children}
       </body>
+      <Analytics />
     </html>
   );
 }

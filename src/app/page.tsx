@@ -1,8 +1,8 @@
-'use client'; // App Routerのクライアントコンポーネント
+'use client';
 
 import styles from './page.module.scss';
 import { useState } from 'react';
-import { useRouter } from 'next/navigation'; // ここを修正
+import { useRouter } from 'next/navigation';
 import type { FormEvent, ChangeEvent } from 'react';
 
 export default function Home() {
