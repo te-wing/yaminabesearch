@@ -3,8 +3,6 @@ import { searchEngines } from '@/data/searchEngines';
 
 export default function SearchPage({
   searchParams,
-}: {
-  searchParams: { [key: string]: string | string[] | undefined };
 }) {
   const query = searchParams.q;
 
